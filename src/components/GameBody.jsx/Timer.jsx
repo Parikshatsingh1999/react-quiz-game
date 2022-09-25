@@ -4,22 +4,29 @@ import { GameContext } from '../Game';
 
 
 
-function Timer({stop,gameOver}) {
+function Timer({stop,questionNumber}) {
 
-    const [time,setTime] = useState(10);
-    const [reset,setReset] = useState(stop);
+   
+    const [time,setTime] = useState(30);
+   
+    
 
     const GameContent = useContext(GameContext);
-    console.log('timer');
+
+    useEffect(()=>{
+    setTime(30);
+    },[questionNumber])
+
+   
 
     useEffect(()=>{
 
-        let interval = setInterval(()=>{
+       let interval = setInterval(()=>{
 
           setTime(prev=>{
                 let update = prev-1;
                 if(!update){
-                    setReset(true);
+                    
                     clearInterval(interval);
                     setTimeout(()=>{
 
@@ -34,11 +41,13 @@ function Timer({stop,gameOver}) {
 
         },1000)
 
+    
+        if(stop) clearInterval(interval);
         return (()=>{
             clearInterval(interval);
         })
 
-    },[])
+    },[stop])
 
   return (
     <div className='timer-main'>

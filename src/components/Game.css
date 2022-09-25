@@ -133,3 +133,36 @@ align-items: center;
 
     
 }
+
+@media only screen and (max-width:768px){
+
+
+    .main-wrap {
+
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .timerSpace {
+        height: 30%;
+    }
+    .ladder {
+        width: 100%;
+    }
+    .ladder-item{display: none;}
+    .ladder-item.active {display:block;}
+    .timer-main {
+      transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;}
+        .endgame {
+            height: 100vh;}
+    .ladder-main>.inner {height: 15vh;}
+    .question h5 {width:90%;}
+    .questionarea {
+        width: 100%;}
+
+        .questions-inner {height:85vh;}
+        .answer-item {width:80%;}
+
+
+}

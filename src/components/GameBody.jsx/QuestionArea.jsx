@@ -8,11 +8,13 @@ import Timer from './Timer.jsx';
 function QuestionArea({number}) {
 
     const [questionnumber,setQuestionnumber] = useState(0);
-console.log('question area');
+
+    const [shutTimer,setShutTimer] = useState(false);
 
     useEffect(()=>{
-        console.log("area" , number);
+    
 setQuestionnumber(number);
+setShutTimer(false);
     },[number])
 
     const GameContent = useContext(GameContext);
@@ -21,16 +23,20 @@ setQuestionnumber(number);
         if(status) GameContent.answerProvided();
         else GameContent.gameOver();
     }
-console.log(questionnumber,'number',QuestionsData[questionnumber]);
+
+const stopTimer = ()=>{
+setShutTimer(true);
+};
+
   return (
     <div className='questions-main'>
 
 <div className='questions-inner'>
 <div className='timerSpace'>
-{/* <Timer stop={false}/> */}
+<Timer stop={shutTimer} questionNumber={questionnumber}/>
 </div>
 <div className='questionspace'>
-{questionnumber?<Question setAnswer={answered} presentQuestion={QuestionsData[questionnumber-1]}/>:""}
+{questionnumber?<Question stopTimer={stopTimer} setAnswer={answered} presentQuestion={QuestionsData[questionnumber-1]}/>:""}
 </div>
 </div>
 

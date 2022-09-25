@@ -1,7 +1,7 @@
 import React ,{useState,useEffect} from 'react';
 
 
-function Question({presentQuestion,setAnswer}) {
+function Question({presentQuestion,setAnswer,stopTimer}) {
 
     const [question, setQuestion] = useState(null);
     const [selectedAnswer , setSelectedAnswer] = useState(null);
@@ -16,6 +16,8 @@ setSelectedAnswer(null);
    },[presentQuestion])
 
    const handleClick = (answer)=>{
+
+    stopTimer();
 
     setSelectedAnswer(answer);
 
