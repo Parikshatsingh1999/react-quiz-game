@@ -102,6 +102,19 @@ align-items: center;
 
 .restartbtn{cursor:pointer;width:40%;margin:0 auto;padding: 2%;background:#002244;border:1px solid;border-radius:10px;}
 
+.was-correct{
+    animation: wasCorrect 3s ease forwards;
+}
+
+@keyframes wasCorrect {
+    0%,60%{
+        background: #452c63;
+    }
+    100%{
+        background: #1CAC78;
+    }
+}
+
 @keyframes correct {
 
     0%,40%{

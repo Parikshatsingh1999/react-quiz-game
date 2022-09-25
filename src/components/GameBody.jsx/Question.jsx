@@ -46,7 +46,7 @@ setSelectedAnswer(null);
 <h5> {question.question} </h5>
 <div className='answers'>
    { question.answers.map((item,index)=>(
-<div className={'answer-item ' + (selectedAnswer?"answered ":"") + (selectedAnswer== item ? customClass:"") } key={index} onClick={(e)=>handleClick(item)}>
+<div className={'answer-item ' + (selectedAnswer?item.correct?"was-correct ":"":"") + (selectedAnswer?"answered ":"") + (selectedAnswer== item ? customClass:"") } key={index} onClick={(e)=>handleClick(item)}>
     <label> {item.answer} </label>
     </div>
     ))
