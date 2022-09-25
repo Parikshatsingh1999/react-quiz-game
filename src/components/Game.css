@@ -1,0 +1,135 @@
+.main-wrap{
+    max-height:100vh;
+    height:100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom ,#002244,#002D62  );
+    display: flex;
+
+}
+
+.questionarea{width:70%;background:linear-gradient(to bottom ,rgba(0,0,0,0),rgba(255,255,255,0.5) ),  url("../../public/millionaire01.jpg") center;}
+.ladder{width:30%;}
+
+body{
+    margin: 0;
+color:white;font-size: 18px;
+font-weight: 600;
+}
+
+.ladder-item.active{
+    background: cadetblue;
+}
+.ladder-item {
+   
+    width: 80%;
+    margin: 1% auto;
+    border-radius: 20px;
+    padding: 2%;
+    
+}
+.ladder-main>.inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+
+
+}
+
+.ladder-item .inner{display: flex;align-items: center;}
+.ladder-item h3{margin:0;}
+.ladder-item label{width:20%;text-align: left;}
+
+.questions-inner{
+    display: flex;
+    flex-direction: column;
+  
+    height: 90vh;
+    padding: 4% 0;
+}
+
+.timerSpace{
+    height: 50%;position: relative;
+}
+.timer-inner{
+    border: 5px solid white;
+    border-radius: 50%;
+    font-size:30px;
+    width: 80px;height:80px;display: flex;justify-content: center;align-items: center;}
+.timer-main{
+
+    position: absolute;
+    bottom: 20%;
+left:10%;
+}
+
+.answers{margin-top:4%;   display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+.answer-item {
+    font-size:20px;
+    width: 30%;
+    margin: 1%;
+    background: #452c63;
+    padding: 16px;
+    border:1px solid white;
+    border-radius: 16px;
+    
+}
+.question{font-size: 24px;}
+.question h5{border:2px solid;border-color:rgba(255,255,255,0.5);background: #1F305E;padding: 2%;width: 80%;margin: auto;border-radius:16px}
+
+.answer-item:hover{background: #1C39BB;cursor:pointer;transform:scale(1.01);}
+
+.answer-item.correct{
+    animation: correct 2s ease forwards;
+}
+
+.answer-item.wrong{
+    animation: wrong 2s ease forwards;
+}
+
+.answer-item.answered{cursor: not-allowed;pointer-events: none;}
+.endgame{height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    background:rgba(0,0,0,0.6);
+}
+
+@keyframes correct {
+
+    0%,40%{
+        background:#1da1f2;
+    }
+
+    20%,60%{
+        background:#1C39BB;
+    }
+
+    100%{
+        background: #1CAC78;
+    }
+
+    
+}
+
+@keyframes wrong {
+
+    0%,40%{
+        background:#1da1f2;
+    }
+
+    20%,60%{
+        background:#1C39BB;
+    }
+
+    100%{
+        background: #e41c38;
+    }
+
+    
+}
