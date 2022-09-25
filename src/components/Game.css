@@ -81,7 +81,7 @@ align-items: center;
 .question{font-size: 24px;}
 .question h5{border:2px solid;border-color:rgba(255,255,255,0.5);background: #1F305E;padding: 2%;width: 80%;margin: auto;border-radius:16px}
 
-.answer-item:hover{background: #1C39BB;cursor:pointer;transform:scale(1.01);}
+.answer-item:hover{cursor:pointer;transform:scale(1.01);}
 
 .answer-item.correct{
     animation: correct 2s ease forwards;
@@ -182,5 +182,13 @@ align-items: center;
         .answer-item {width:80%;}
 
         .restartbtn{width:80%;}
+
+}
+
+@media screen and (min-width:768px){
+
+    .answer-item:hover{
+    background: #1C39BB;
+    }
 
 }
