@@ -16,12 +16,19 @@ export default function Game() {
 
 
    const [endGame,setEndGame] = useState(false);
+   
 
    const gameOver =()=>{
     setEndGame(true);
 
    }
 
+
+   const RestartGame = ()=>{
+    
+    setQuestionNumber(1);
+    setEndGame(false);
+   }
   
    useEffect(()=>{
    
@@ -44,8 +51,8 @@ return (()=>{
         
         <GameContext.Provider value={{gameOver,answerProvided}} >  
 <div className='questionarea'>
-{ endGame?
-        <EndGame questionNumber={questionNumber}/>:
+{ endGame==true?
+        <EndGame reStart={RestartGame} questionNumber={questionNumber}/>:
 <QuestionArea number={questionNumber}/>
 }
 </div>

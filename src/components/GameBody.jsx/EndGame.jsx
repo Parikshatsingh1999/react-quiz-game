@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 
-import MoneyLadderData from './MoneyLadderData.js'
-function EndGame({questionNumber}) {
+import MoneyLadderData from './MoneyLadderData.js';
+
+
+function EndGame({questionNumber , reStart}) {
     console.log('end game');
     const [moneyWon , setMoneyWon] = useState("Rs 0");
 
@@ -24,7 +26,9 @@ function EndGame({questionNumber}) {
     Game Over
 </h3>
 
-<h5> You Won {moneyWon} </h5>
+<h5> <span> You Won </span> {moneyWon} </h5>
+
+<label className='restartbtn' onClick={reStart}> Restart Game </label>
 
     </div>
   )
