@@ -3,7 +3,7 @@ import React from 'react'
 function MoneyLadder({MoneyLadder=[] , questionNumber = 1}) {
 
   return (
-    <div className='ladder-main'>
+    <div className='ladder-main tests'>
 
 <div className='inner'>
 
