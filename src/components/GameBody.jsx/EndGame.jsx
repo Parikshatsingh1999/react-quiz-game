@@ -5,7 +5,7 @@ import MoneyLadderData from './MoneyLadderData.js';
 
 
 function EndGame({questionNumber , reStart}) {
-    console.log('end game');
+   
     const [moneyWon , setMoneyWon] = useState("Rs 0");
 
     useState(()=>{

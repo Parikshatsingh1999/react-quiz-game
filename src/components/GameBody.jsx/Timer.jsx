@@ -52,7 +52,7 @@ function Timer({stop,questionNumber}) {
   return (
     <div className='timer-main'>
 
-<div className='timer-inner'>
+<div className={'timer-inner ' + (time<10?"running-out":"")}>
 
 <label>  {time} </label>
 

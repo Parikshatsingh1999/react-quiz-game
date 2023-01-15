@@ -106,6 +106,9 @@ align-items: center;
     animation: wasCorrect 3s ease forwards;
 }
 
+.timer-inner.running-out{background: red;}
+
+
 @keyframes wasCorrect {
     0%,60%{
         background: #452c63;

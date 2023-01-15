@@ -12,6 +12,7 @@ export const GameContext = React.createContext();
 
 export default function Game() {
     
+
    const [questionNumber , setQuestionNumber] = useState(0); 
 
 
@@ -31,7 +32,7 @@ export default function Game() {
    }
   
    useEffect(()=>{
-   
+
 setQuestionNumber(1);
 
 return (()=>{
